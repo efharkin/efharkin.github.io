@@ -1,0 +1,111 @@
+presentations:
+  - title: >
+      Multiple Mechanisms of Gain Modulation in the Serotonin System
+    location: >
+      <a href="https://neuromatch.io">Neuromatch</a> 1.0
+    date: April 2020
+    authors: >
+      *Emerson Harkin*, Alexandre Payeur, Jean-Fran&ccedil;ois Boucher, L&eacute;a
+      Caya-Bissonnette, Dominic Cyr, Andr&eacute; Longtin, Michael Lynn, Chloe Stewart,
+      Jean-Claude B&eacute;&iuml;que, and Richard Naud.
+    description: |
+      - Bottom-up model of the serotonin system
+      - [Slides](/assets/doc/Harkin_Emerson_2020_Neuromatch.pdf)
+
+  - short: kremkow
+    title: >
+      Microcircuit Mechanisms for Controlling Serotonergic Gain
+    location: Charite University Berlin
+    date: November 2019
+
+  - title: >
+      Reverse-Engineering the Serotonin System
+    location: uOttawa Brain Health Awareness Week
+    date: October 2019
+    description: |
+      - Five minute talk showcasing my research to ~100 person general audience
+      - [Slides](/assets/doc/Harkin_Emerson_2019_brain_health_awareness.pdf)
+
+  - title: >
+      Reinforcement Learning for Systems Neuroscientists
+    location: uOttawa Center for Neural Dynamics
+    date: August 2019
+    description: |
+      - Introduction to reinforcement learning theory with applications to the serotonin system
+      - Based on *Reinforcement Learning* by Sutton and Barto (2018)
+      - [Slides](/assets/doc/Harkin_Emerson_2019_reinforcement_learning.pdf)
+
+  - title: >
+      Introduction to Optogenetics
+    location: Brain Health Research Day
+
+awards:
+  - title: NSERC Doctoral Post-Graduate Scholarship (PGS-D)
+    source: Natural Sciences and Engineering Research Council
+    start_date: January 2019
+    end_date: December 2021
+    description: >
+      - National research scholarship awarded based on research potential,
+        leadership qualities, and academic achievement
+
+  - title: University of Ottawa Excellence Scholarship
+    start_date: January 2019
+    end_date: December 2021
+
+  - title: CIHR Frederick Banting and Charles Best Canada Graduate Scholarship
+    source: Canadian Institutes of Health Research
+    description: >
+      - Master's level national research scholarship awarded based on research
+        potential, leadership qualities, and academic achievement
+
+  - title: University of Ottawa Excellence Scholarship
+
+  - title: University of Ottawa Graduate Admissions Scholarship
+    start_date: September 2016
+
+  - title: Dean's Honour List
+    source: University of Ottawa Faculty of Science
+    start_date: September 2015
+    end_date: April 2016
+
+  - title: NSERC Undergraduate Student Research Award
+    source: Natural Sciences and Engineering Research Council
+    description: >
+      - Undergraduate level national research scholarship awarded based on
+        academic achievement and research potential
+
+  - title: Dean's Honour List
+    source: University of Ottawa Faculty of Science
+    start_date: September 2014
+    end_date: April 2015
+
+  - title: Dean's Honour List
+    source: University of Ottawa Faculty of Science
+    start_date: September 2013
+    end_date: April 2014
+
+  - title: Dean's Honour List
+    source: University of Ottawa Faculty of Science
+    start_date: September 2012
+    end_date: April 2013
+
+  - title: University of Ottawa Undergraduate Admissions Scholarship
+    start_date: September 2012
+    end_date: April 2016
+
+education:
+  - title: M.Sc. in Neuroscience
+    source: University of Ottawa Faculty of Medicine
+    start_date: September 2016
+    end_date: December 2018
+    description: |
+      - Research-based degree in experimental and computational neuroscience
+      - Coursework in computational neuroscience
+
+  - title: B.Sc. hon. in Biomedical Sciences
+    source: University of Ottawa Faculty of Science
+    start_date: September 2012
+    end_date: April 2016
+    description: |
+      - Coursework in biology, electrophysiology and physics, biostatistics,
+        calculus, logic, and literature
