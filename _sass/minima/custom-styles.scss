@@ -1,0 +1,54 @@
+ul.cv-list {
+    list-style-type: none;
+    margin-left: 0;
+    margin-bottom: 6em;
+    border-style: solid none solid none;
+    border-color: $grey-color-dark;
+    border-width: 5px;
+}
+
+.cv-list > li {
+    padding: 2em 0 4em 0;
+    border-bottom: 1px solid $grey-color-light;
+}
+
+.cv-list h3 {
+    margin-bottom: 0.2em;
+}
+
+.cv-list .item-meta {
+    margin-bottom: 1em;
+}
+
+$grey-color-medium: lighten($grey-color-dark, 20%) !default;
+
+.cv-list .item-meta {
+    color: $grey-color-medium;
+}
+
+main a:link {
+    color: $grey-color-dark;
+    text-decoration: underline;
+}
+
+main a:visited {
+    color: $grey-color-medium;
+}
+
+main a:hover {
+    color: white;
+    background-color: $grey-color-medium;
+    text-decoration: none;
+}
+
+a.button:link, a.button:visited, a.button:hover {
+    padding: 0.5em;
+    background-color: $grey-color-dark;
+    color: white;
+    text-decoration: none;
+}
+
+a.button:hover {
+    background-color: $grey-color-medium;
+}
+

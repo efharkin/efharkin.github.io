@@ -1,0 +1,75 @@
+---
+title: Curriculum Vitae
+layout: page
+---
+
+<h2> Posters and Talks </h2>
+
+<ul class="cv-list">
+    {% for pres in site.data.cv.presentations %}
+    <li>
+        <h3>{{pres.title}}</h3>
+        <div class="item-meta" style="display: flex;">
+            <div style="flex: 7;">{{pres.location}}</div>
+            <div class="time-container" style="flex: 3;" align="right">
+                <time datetime="{{pres.date | date: '%Y-%m'}}">{{ pres.date }}</time>
+            </div>
+        </div>
+        {% if pres.authors != blank %}
+            <p>{{ pres.authors }}</p>
+        {% endif %}
+        {% if pres.description != blank %}
+            {{ pres.description | markdownify }}
+        {% endif %}
+        {% if pres.download != blank %}
+            <div style="margin-top: 1.5em;">
+                <a href="{{pres.download.path}}" class="button">
+                    {{ pres.download.type }}
+                </a>
+            </div>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+
+<h2> Outreach </h2>
+
+<h2> Awards </h2>
+
+<ul class="cv-list">
+    {% for award in site.data.cv.awards %}
+    <li>
+        <h3>{{award.title}}</h3>
+        <div class="item-meta" style="display: flex;">
+            <div style="flex: 6;">{{ award.source }}</div>
+            <div class="time-container" style="flex: 4;" align="right">
+                <time datetime="{{award.start_date | date: '%Y-%m'}}">{{ award.start_date }}</time>
+                &ndash;
+                <time datetime="{{award.end_date | date: '%Y-%m'}}">{{ award.end_date }}</time>
+            </div>
+        </div>
+        {% if award.description != blank %}
+            {{ award.description | markdownify }}
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+
+<h2> Education </h2>
+
+<ul class="cv-list">
+    {% for degree in site.data.cv.education %}
+    <li>
+        <h3>{{degree.title}}</h3>
+        <div class="item-meta" style="display: flex;">
+            <p style="flex: 6;">{{ degree.source }}</p>
+            <div class="time-container" style="flex: 4;" align="right">
+                <time datetime="{{degree.start_date | date: '%Y-%m'}}">{{ degree.start_date }}</time>
+                &ndash;
+                <time datetime="{{degree.end_date | date: '%Y-%m'}}">{{ degree.end_date }}</time>
+            </div>
+        </div>
+        {{ degree.description | markdownify }}
+    </li>
+    {% endfor %}
+</ul>
