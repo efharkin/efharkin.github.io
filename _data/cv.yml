@@ -9,7 +9,9 @@ presentations:
       Caya-Bissonnette, Dominic Cyr, Andr&eacute; Longtin, Michael Lynn, Chloe Stewart,
       Jean-Claude B&eacute;&iuml;que, and Richard Naud.
     description: |
-      - Bottom-up model of the serotonin system
+      - Short talk to international research audience
+      - Predicting the properties of the serotonin system using machine
+        learning models
     download:
       type: Slides
       path: /assets/doc/Harkin_Emerson_2020_Neuromatch.pdf
@@ -18,11 +20,20 @@ presentations:
       Microcircuit Mechanisms for Controlling Serotonergic Gain
     location: "Charit&eacute; University Berlin"
     date: November 2019
+    authors: >
+      Emerson Harkin, Alexandre Payeur, Jean-Fran&ccedil;ois Boucher, Dominic
+      Cyr, Andr&eacute; Longtin, Michael Lynn, Chloe Stewart, Richard Naud, and
+      Jean-Claude B&eacute;&iuml;que.
+    description: |
+      - Research talk summarizing our recent advances in predicting the
+        properties of the serotonin system using machine learning models
 
   - title: >
       Reverse-Engineering the Serotonin System
     location: University of Ottawa Brain Health Awareness Week
     date: October 2019
+    authors: >
+      Emerson Harkin, Jean-Claude B&eacute;&iuml;que, and Richard Naud.
     description: |
       - Five minute talk showcasing my research to ~100 person general audience
     download:
@@ -33,8 +44,10 @@ presentations:
       Reinforcement Learning for Systems Neuroscientists
     location: University of Ottawa Center for Neural Dynamics
     date: August 2019
+    authors: Emerson Harkin.
     description: |
-      - Introduction to reinforcement learning theory with applications to the serotonin system
+      - Introduction to reinforcement learning theory with applications to the
+        serotonin system
       - Based on *Reinforcement Learning* by Sutton and Barto (2018)
     download:
       type: Slides
@@ -42,13 +55,16 @@ presentations:
 
   - title: Non-Uniform Subthreshold Dynamics and Integrative Features in Dorsal Raphe Neurons
     location: |
-      Canadian Association for Neuroscience
-      12th Annual Meeting
-      Vancouver
+      Canadian Association for Neuroscience 12th Annual Meeting &ndash; Vancouver
     date: May 2018
     authors: >
       Emerson Harkin, Michael Lynn, Alexandre Payeur, Andr&eacute; Longtin,
       Richard Naud, and Jean-Claude B&eacute;&iuml;que.
+    description: |
+      - Presented poster with preliminary results at national research
+        conference
+      - Maximum likelihood machine learning models predict variable sub-linear
+        dynamics of serotonin neurons
     download:
       type: Poster
       path: /assets/doc/Harkin_Emerson_2018_CAN.pdf
@@ -56,44 +72,93 @@ presentations:
   - title: Manipulating Neurons With Light
     location: University of Ottawa Brain and Mind Resarch Institute
     date: May 2017
+    authors: "Emerson Harkin and Jean-Claude B&eacute;&iuml;que."
     description: |
       - Introductory seminar on optogenetics for research audience
     download:
       type: Slides
       path: /assets/doc/Harkin_Emerson_2017_optogenetics.pdf
 
+outreach:
+  - title: Community Outreach Volunteer
+    location: >
+      <a href="https://outreach.letstalkscience.ca/ottawa.html">
+      Let's Talk Science
+      </a>
+    start_date: September 2017
+    end_date: June 2018
+    description: |
+      - Increased youth science engagement through hands-on elementary school
+        classroom activities in collaboration with local educator
+
+  - title: Volunteer Circle Member
+    location: >
+      <a href="https://cosa-ottawa.ca">
+      Circles of Support and Accountability
+      </a>
+    start_date: August 2016
+    end_date: November 2017
+    description: |
+      - Helped with reintegration of recently-incarcerated individual into
+        society by offering support and maintaining their personal
+        accountability
+      - Collaborated with team of volunteers (a "circle") and professionals to
+        provide mentorship, social support, and hands-on assistance while
+        challenging potentially problematic attitudes and behaviours during
+        once to twice-weekly meetings
+      - Summarized circle progress in monthly written reports for organization
+        records
+
 awards:
-  - title: NSERC Doctoral Post-Graduate Scholarship (PGS-D)
+  - title: Doctoral Post-Graduate Scholarship (PGS-D)
     source: Natural Sciences and Engineering Research Council
     start_date: January 2019
     end_date: December 2021
-    description: >
+    description: |
       - National research scholarship awarded based on research potential,
         leadership qualities, and academic achievement
 
-  - title: University of Ottawa Excellence Scholarship
+  - title: Excellence Scholarship
+    source: University of Ottawa Faculty of Medicine
     start_date: January 2019
     end_date: December 2021
+    description: |
+      - In recognition of receipt of an external research award from NSERC (see
+        above)
 
-  - title: CIHR Frederick Banting and Charles Best Canada Graduate Scholarship
+  - title: Frederick Banting and Charles Best Canada Graduate Scholarship
     source: Canadian Institutes of Health Research
-    description: >
+    start_date: May 2017
+    end_date: April 2018
+    description: |
       - Master's level national research scholarship awarded based on research
         potential, leadership qualities, and academic achievement
 
-  - title: University of Ottawa Excellence Scholarship
+  - title: Excellence Scholarship
+    source: University of Ottawa Faculty of Medicine
+    start_date: May 2017
+    end_date: April 2018
+    description: |
+      - In recognition of receipt of an external research award from CIHR (see
+        above)
 
-  - title: University of Ottawa Graduate Admissions Scholarship
+  - title: Graduate Admissions Scholarship
+    source: University of Ottawa
     start_date: September 2016
+    end_date: April 2017
+    description: |
+      - Awarded based on academic merit
 
   - title: Dean's Honour List
     source: University of Ottawa Faculty of Science
     start_date: September 2015
     end_date: April 2016
 
-  - title: NSERC Undergraduate Student Research Award
+  - title: Undergraduate Student Research Award
     source: Natural Sciences and Engineering Research Council
-    description: >
+    start_date: May 2015
+    end_date: August 2015
+    description: |
       - Undergraduate level national research scholarship awarded based on
         academic achievement and research potential
 
@@ -112,18 +177,72 @@ awards:
     start_date: September 2012
     end_date: April 2013
 
-  - title: University of Ottawa Undergraduate Admissions Scholarship
+  - title: Undergraduate Admissions Scholarship
+    source: University of Ottawa
     start_date: September 2012
     end_date: April 2016
+    description: |
+      - Awarded based on academic merit
 
 education:
+  - title: Ph.D. in Neuroscience
+    source: University of Ottawa Faculty of Medicine
+    start_date: January 2019
+    end_date: present
+    description: |
+      - Research-based degree in computational neuroscience supervised by Dr.
+        Richard Naud
+      - International research collaboration (in progress)
+        - Represented Ottawa-based research group during visits to
+          collaborators based at the [Allen Institute for Brain
+          Science](https://alleninstitute.org) (Seattle) and Charit&eacute;
+          University Berlin
+      - Administation and maintenance of lab Linux server (used to run
+        simulations at scale) and private GitHub page
+      - Supervision and mentorship
+        - Supervised data collection by two master's students
+        - Supervised one semester rotational research project of an
+          undergraduate student leading to poster presentation of preliminary
+          results
+        - Lead three day lab visit by undergraduate students considering
+          studies in computational neuroscience
+      - Audited course in applied probability theory
+
   - title: M.Sc. in Neuroscience
     source: University of Ottawa Faculty of Medicine
     start_date: September 2016
     end_date: December 2018
     description: |
       - Research-based degree in experimental and computational neuroscience
+        supervised by [Dr. Jean-Claude
+        B&eacute;&iuml;que](https://www.uottawa.ca/brain/people/beique-jean-claude)
+        and co-supervised by [Dr. Richard
+        Naud](https://med.uottawa.ca/cellular-molecular/people/naud-richard)
+      - Interdisciplinary research
+        - Designed, carried out, and analyzed experiments in collaboration with
+          electrophysiologists and physicists to better understand the
+          electrical properties of serotonin neurons
+        - Supervised data collection by two undergraduate students
+        - Extended a Python library for fitting maximum-likelihood machine
+          learning models of single neurons to capture the distinctive
+          properties of serotonin neurons (code under embargo)
+        - Defended research project at departmental seminars and poster days
+          (*not* listed above)
+        - **Outcome:** Preliminary results accepted for poster presentation at
+          national research conference, awarded Best Neuroscience M.Sc. Student
+          by department, and nominated for Best M.Sc. Thesis by examination
+          committee members Dr. Leonard Maler and Dr. Tuan Bui
+      - Implemented a [Python toolbox](https://github.com/efharkin/ez-ephys)
+        for generating and visualizing expected results of complex
+        electrophysiological experiments
+      - Organized weekly lab meetings
       - Coursework in computational neuroscience
+        - [Python simulation
+          code](https://github.com/efharkin/Richardson_replication) replicating
+          the results of Richardson, Brunel, and Hakim (2003) for an assignment
+    download:
+      type: Thesis
+      path: /assets/doc/Harkin_Emerson_2018_thesis.pdf
 
   - title: B.Sc. hon. in Biomedical Sciences
     source: University of Ottawa Faculty of Science
@@ -132,3 +251,15 @@ education:
     description: |
       - Coursework in biology, electrophysiology and physics, biostatistics,
         calculus, logic, and literature
+      - One year honours research project
+        - Supervised by [Dr. Paul R.
+          Albert](http://www.ohri.ca/profile/palbert) (Ottawa Hospital Reseach
+          Institute)
+        - Biochemical experiments analyzed with linear statistical models
+          (using R) revealed a dose-dependent effect of the mood-stabilizer
+          lithium on gene regulatory proteins involved in serotonin receptor
+          expression
+        - Presented work in written thesis format and as a poster
+    download:
+      type: Thesis
+      path: /assets/doc/Harkin_Emerson_2016_thesis.pdf

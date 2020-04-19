@@ -38,12 +38,14 @@ main a:visited {
 main a:hover {
     color: white;
     background-color: $grey-color-medium;
+    border-radius: 2px;
     text-decoration: none;
 }
 
 a.button:link, a.button:visited, a.button:hover {
     padding: 0.5em;
     background-color: $grey-color-dark;
+    border-radius: 5px;
     color: white;
     text-decoration: none;
 }

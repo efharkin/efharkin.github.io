@@ -23,8 +23,9 @@ layout: page
         {% endif %}
         {% if pres.download != blank %}
             <div style="margin-top: 1.5em;">
-                <a href="{{pres.download.path}}" class="button">
-                    {{ pres.download.type }}
+                <a href="{{pres.download.path}}" target="_blank" class="button">
+                    <i class="fas fa-file-pdf"></i>
+                    View {{ pres.download.type }}
                 </a>
             </div>
         {% endif %}
@@ -34,22 +35,24 @@ layout: page
 
 <h2> Outreach </h2>
 
-<h2> Awards </h2>
-
 <ul class="cv-list">
-    {% for award in site.data.cv.awards %}
+    {% for vol in site.data.cv.outreach %}
     <li>
-        <h3>{{award.title}}</h3>
+        <h3>{{vol.title}}</h3>
         <div class="item-meta" style="display: flex;">
-            <div style="flex: 6;">{{ award.source }}</div>
-            <div class="time-container" style="flex: 4;" align="right">
-                <time datetime="{{award.start_date | date: '%Y-%m'}}">{{ award.start_date }}</time>
-                &ndash;
-                <time datetime="{{award.end_date | date: '%Y-%m'}}">{{ award.end_date }}</time>
+            <div style="flex: 7;">{{vol.location}}</div>
+            <div class="time-container" style="flex: 3;" align="right">
+                {% if vol.start_date != blank %}
+                    <time datetime="{{vol.start_date | date: '%Y-%m'}}">{{ vol.start_date }}</time>
+                    {% if vol.end_date != blank %}
+                        &ndash;
+                        <time datetime="{{vol.end_date | date: '%Y-%m'}}">{{ vol.end_date }}</time>
+                    {% endif %}
+                {% endif %}
             </div>
         </div>
-        {% if award.description != blank %}
-            {{ award.description | markdownify }}
+        {% if vol.description != blank %}
+            {{ vol.description | markdownify }}
         {% endif %}
     </li>
     {% endfor %}
@@ -70,6 +73,39 @@ layout: page
             </div>
         </div>
         {{ degree.description | markdownify }}
+        {% if degree.download != blank %}
+            <div style="margin-top: 1.5em;">
+                <a href="{{degree.download.path}}" class="button">
+                    <i class="fas fa-file-pdf"></i>
+                    View {{ degree.download.type }}
+                </a>
+            </div>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+
+<h2> Awards </h2>
+
+<ul class="cv-list">
+    {% for award in site.data.cv.awards %}
+    <li>
+        <h3>{{award.title}}</h3>
+        <div class="item-meta" style="display: flex;">
+            <div style="flex: 6;">{{ award.source }}</div>
+            <div class="time-container" style="flex: 4;" align="right">
+                {% if award.start_date != blank %}
+                    <time datetime="{{award.start_date | date: '%Y-%m'}}">{{ award.start_date }}</time>
+                    {% if award.end_date != blank %}
+                        &ndash;
+                        <time datetime="{{award.end_date | date: '%Y-%m'}}">{{ award.end_date }}</time>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+        {% if award.description != blank %}
+            {{ award.description | markdownify }}
+        {% endif %}
     </li>
     {% endfor %}
 </ul>
