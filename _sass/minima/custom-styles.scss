@@ -26,16 +26,16 @@ $grey-color-medium: lighten($grey-color-dark, 20%) !default;
     color: $grey-color-medium;
 }
 
-main a:not(.post-link):link {
+main a:not(.post-link):not(.button):link {
     color: $grey-color-dark;
     text-decoration: underline;
 }
 
-main a:not(.post-link):visited {
+main a:not(.post-link):not(.button):visited {
     color: $grey-color-medium;
 }
 
-main a:not(.post-link):hover {
+main a:not(.post-link):not(.button):hover {
     color: white;
     background-color: $grey-color-medium;
     border-radius: 2px;
