@@ -20,8 +20,9 @@
 
 title: Emerson Harkin
 # email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Made with :heart: in Ottawa using Jekyll.
+description: |
+  Made with :heart: in Ottawa using Jekyll. <br>
+  Theme based on Minima, inspired by <a href="https://github.com/chesterhow/tale">Tale</a>.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: efharkin
