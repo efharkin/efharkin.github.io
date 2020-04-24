@@ -1,0 +1,78 @@
+stat:
+  - title: The Elements of Statistical Learning
+    authors: Hastie, Tibshirani, and Friedman
+    description: |
+      - A comprehensive text on bread-and-butter statistical methods used in
+        data science
+      - Emphasizes the mathematical rationale behind methods for predictive
+        modeling, dimensionality reduction, and function approximation
+      - Great as an introduction and as a reference: I got my copy in 2016 and
+        still pick it up off my bookshelf
+
+  - title: Reinforcement Learning
+    authors: Sutton and Barto
+    description: |
+      - An introduction to models that learn to make predictions by interacting
+        with their environments
+      - Written for engineers, but still interesting for neuroscientists and
+        psychologists
+          - I distilled some of the key concepts for systems neuroscientists in
+            a seminar series in 2019; you can view the slides
+            [here](/assets/doc/Harkin_Emerson_2019_reinforcement_learning.pdf)
+
+  - title: Deep Learning
+    authors: Goodfellow, Bengio, and Courville
+    description: |
+      - A survey of popular black-box methods for function approximation and
+        the heuristics behind them
+      - Buy this book if you want a lightly mathematical survey of common
+        neural network architectures and training algorithms
+      - Buy a different book if you want to get a machine learning pipeline off
+        the ground as fast as possible
+
+coding:
+  - title: Clean Code
+    authors: Robert C. Martin
+    description: |
+      - Could have been titled "How to Write Code that Other People Can
+        Understand"
+          - This is a **severely** undervalued skill in science, especially
+            condering that "other people" is a category that will come to
+            include you in three weeks time
+      - Written in a slightly argumentative style and full of admonishments
+        that will raise eyebrows (my favourite being that the ideal function is
+        one line long and takes no arguments), but concrete, persuasive, and
+        well worth a read
+
+  - title: Effective C++
+    authors: Scott Meyers
+    description: |
+      - Useful to read for its concrete treatment of object oriented
+        programming even if you don't write C++
+      - As a person who lives mainly in Python, this gave me a more thorough
+        appreciation for all the low-level high-performance headaches I don't
+        have to deal with on a daily basis
+
+  - title: The R Inferno
+    authors: Patrick Burns
+    description: |
+      - The first and probably funniest book I've read about programming
+      - From the abstract: "If you are using R and you think you're in hell,
+        this is a map for you."
+          - Written for scientists and statisticians struggling with
+            programming, not programmers struggling with statistics
+      - You might need to read this book if you don't know why `1.1 + 2.2 !=
+        3.3`
+          - It's [free](https://www.burns-stat.com/pages/Tutor/R_inferno.pdf)
+            from the author
+
+neuro:
+  - title: Neuronal Dynamics
+    authors: >
+      Gerstner, Kistler,
+      <a href="https://med.uottawa.ca/cellular-molecular/people/naud-richard">Naud</a>,
+      and Paninski
+    description: |
+      - An introduction to mathematical models of biological neurons written
+        mainly for physicists and engineers
+      - Emphasis on GLM-based models of single neurons
