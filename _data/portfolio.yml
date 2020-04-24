@@ -1,0 +1,24 @@
+solo:
+  - title: ez-ephys
+    description: |
+      - Python toolbox for electrophysiologists
+      - Object-oriented framework for designing experiments
+      - Utility functions and classes for loading and visualizing data
+    url: "https://github.com/efharkin/ez-ephys"
+
+  - title: Robotic Government Statistician
+    description: |
+      - Tiny Python program for summarizing StatCan datasets in plain English
+          - Ingests CSV data, extracts recent trends, and outputs a summary of
+            the most noteworthy patterns in
+            [Markdown](https://daringfireball.net/projects/markdown/)
+      - Hacked together in half a day at the [CanDev 2020 data challenge](https://candev.statcan.gc.ca)
+    url: "https://github.com/efharkin/candev"
+
+  - title: Neuron simulations
+    description: |
+      - Final assignment for a computational neuroscience course I took in 2018
+      - Numerical simulations of leaky integrate-and-fire and biophysical
+        conductance-based neurons
+      - Replicated the results of [Richardson and Brunel (2003)](https://www.physiology.org/doi/abs/10.1152/jn.00955.2002)
+    url: "https://github.com/efharkin/Richardson_replication"

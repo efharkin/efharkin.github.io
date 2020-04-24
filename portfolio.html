@@ -1,0 +1,28 @@
+---
+title: Portfolio
+layout: page
+---
+
+<p>Some potentially interesting things I've made.</p>
+
+<h2>Personal Projects</h2>
+
+<ul class="cv-list">
+    {% for proj in site.data.portfolio.solo %}
+    <li>
+        <h3>{{proj.title}}</h3>
+        {% if proj.description != blank %}
+            {{ proj.description | markdownify }}
+        {% endif %}
+        {% if proj.url != blank %}
+            <div style="margin-top: 1.5em;">
+                <a href="{{proj.url}}" target="_blank" class="button">
+                    <i class="fab fa-github"></i>
+                    View Code
+                </a>
+            </div>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+

@@ -1,8 +1,35 @@
 ---
-title: Curriculum Vitae
+title: CV
 layout: page
 exclude: true
 ---
+
+<h2> Hacking </h2>
+
+<ul class="cv-list">
+    {% for hack in site.data.cv.hacks %}
+    <li>
+        <h3>{{hack.title}}</h3>
+        <div class="item-meta" style="display: flex;">
+            <div style="flex: 7;">{{hack.location}}</div>
+            <div class="time-container" style="flex: 3;" align="right">
+                <time datetime="{{hack.date | date: '%Y-%m'}}">{{ hack.date }}</time>
+            </div>
+        </div>
+        {% if hack.description != blank %}
+            {{ hack.description | markdownify }}
+        {% endif %}
+        {% if hack.download != blank %}
+            <div style="margin-top: 1.5em;">
+                <a href="{{hack.download.path}}" target="_blank" class="button">
+                    <i class="fas fa-file-pdf"></i>
+                    View {{ hack.download.type }}
+                </a>
+            </div>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
 
 <h2> Posters and Talks </h2>
 
@@ -34,31 +61,6 @@ exclude: true
     {% endfor %}
 </ul>
 
-<h2> Outreach </h2>
-
-<ul class="cv-list">
-    {% for vol in site.data.cv.outreach %}
-    <li>
-        <h3>{{vol.title}}</h3>
-        <div class="item-meta" style="display: flex;">
-            <div style="flex: 7;">{{vol.location}}</div>
-            <div class="time-container" style="flex: 3;" align="right">
-                {% if vol.start_date != blank %}
-                    <time datetime="{{vol.start_date | date: '%Y-%m'}}">{{ vol.start_date }}</time>
-                    {% if vol.end_date != blank %}
-                        &ndash;
-                        <time datetime="{{vol.end_date | date: '%Y-%m'}}">{{ vol.end_date }}</time>
-                    {% endif %}
-                {% endif %}
-            </div>
-        </div>
-        {% if vol.description != blank %}
-            {{ vol.description | markdownify }}
-        {% endif %}
-    </li>
-    {% endfor %}
-</ul>
-
 <h2> Education </h2>
 
 <ul class="cv-list">
@@ -81,6 +83,31 @@ exclude: true
                     View {{ degree.download.type }}
                 </a>
             </div>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+
+<h2> Outreach </h2>
+
+<ul class="cv-list">
+    {% for vol in site.data.cv.outreach %}
+    <li>
+        <h3>{{vol.title}}</h3>
+        <div class="item-meta" style="display: flex;">
+            <div style="flex: 7;">{{vol.location}}</div>
+            <div class="time-container" style="flex: 3;" align="right">
+                {% if vol.start_date != blank %}
+                    <time datetime="{{vol.start_date | date: '%Y-%m'}}">{{ vol.start_date }}</time>
+                    {% if vol.end_date != blank %}
+                        &ndash;
+                        <time datetime="{{vol.end_date | date: '%Y-%m'}}">{{ vol.end_date }}</time>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+        {% if vol.description != blank %}
+            {{ vol.description | markdownify }}
         {% endif %}
     </li>
     {% endfor %}
