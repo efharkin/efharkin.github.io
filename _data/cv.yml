@@ -29,6 +29,20 @@ presentations:
   - title: >
       Multiple Mechanisms of Gain Modulation in the Serotonin System
     location: >
+      Canadian Computational Neuroscience Spotlight
+    date: April 2020
+    authors: >
+      Emerson Harkin, Alexandre Payeur, Jean-Fran&ccedil;ois Boucher, L&eacute;a
+      Caya-Bissonnette, Dominic Cyr, Andr&eacute; Longtin, Michael Lynn, Chloe Stewart,
+      Jean-Claude B&eacute;&iuml;que, and Richard Naud.
+    description: |
+      - Short talk to national research audience
+      - Predicting the properties of the serotonin system using machine
+        learning models
+
+  - title: >
+      Multiple Mechanisms of Gain Modulation in the Serotonin System
+    location: >
       Canadian Association for Neuroscience 14th Annual Meeting &ndash;
       Montreal (cancelled)
     date: May 2020

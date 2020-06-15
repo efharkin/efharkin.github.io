@@ -1,12 +1,23 @@
 solo:
   - title: ez-ephys
+    icon: >
+      <i class="fab fa-python"></i>
     description: |
       - Python toolbox for electrophysiologists
       - Object-oriented framework for designing experiments
       - Utility functions and classes for loading and visualizing data
     url: "https://github.com/efharkin/ez-ephys"
 
+  - title: swc2dot
+    description: |
+      - Rust command line app for converting SWC neuron morphology files to DOT
+        graph format for easy visualization and portability
+      - Pre-built binaries available for MacOS and Linux
+    url: "https://github.com/efharkin/swc2dot"
+
   - title: Robotic Government Statistician
+    icon: >
+      <i class="fab fa-python"></i>
     description: |
       - Tiny Python program for summarizing StatCan datasets in plain English
           - Ingests CSV data, extracts recent trends, and outputs a summary of
@@ -16,9 +27,10 @@ solo:
     url: "https://github.com/efharkin/candev"
 
   - title: Neuron simulations
+    icon: >
+      <i class="fab fa-python"></i>
     description: |
-      - Final assignment for a computational neuroscience course I took in 2018
-      - Numerical simulations of leaky integrate-and-fire and biophysical
-        conductance-based neurons
+      - Numerical simulations of physics-based neuron models
+      - Implemented in Python, accelerated with [Numba](http://numba.pydata.org/)
       - Replicated the results of [Richardson and Brunel (2003)](https://www.physiology.org/doi/abs/10.1152/jn.00955.2002)
     url: "https://github.com/efharkin/Richardson_replication"
