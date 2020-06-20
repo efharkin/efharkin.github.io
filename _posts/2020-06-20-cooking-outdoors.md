@@ -55,7 +55,7 @@ $$Q = mC \Delta T.$$
 
 Substituting in the values above, we get
 
-$$ Q = 1.2 1 5 $$
+$$ Q = 1.2 \times 1 \times 5 $$
 
 $$ Q = 6 \text{ kJ}. $$
 
