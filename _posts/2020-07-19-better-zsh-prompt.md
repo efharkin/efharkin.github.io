@@ -157,7 +157,7 @@ prompt_dir() {
 
             # Truncate the dir name to the first letter, unless it is the
             # current dir
-            if [[ $i != $num_path_inds ]]; then
+            if [[ $i != $length_of_path ]]; then
                 local elem="$path_as_array[$i]"
                 shrunken_path+="${elem[0,1]}"
             else
