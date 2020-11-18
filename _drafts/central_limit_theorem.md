@@ -1,17 +1,69 @@
 ---
-title: Central limit theorem
+title: "Unlucky: The Statistics of Dungeons and Dragons"
 author: Emerson Harkin
+---
+
+Like any game with a chance component, Dungeons and Dragons invites
+superstition. Sooner or later, players develop a preference for lucky dice (or
+lucky socks). With the COVID-19 pandemic dragging on, my Dungeons and Dragons
+group has moved its sessions from the tabletop to a popular online platform for
+"pen and paper" RPGs, and the platform's random number generator has quickly
+replaced our Dungeon Master's dice as the object of our superstition and
+probabilistic ire.
+
+> Three critical fails in one round? The random number generator must have left
+> its entropy at home!
+>
+> - Me, circa Sunday afternoon
+
+I often find myself wondering "What are the chances?" after a particularly bad
+roll of the dice. Recently, that got me thinking: what *are* the chances?
+
+## Funny shaped dice and probability distributions
+
+For those who don't play, a lot of Dungeons and Dragons revolves around rolling
+strangely-shaped dice to determine whether difficult actions are successful,
+and sometimes how much of an effect the action has. In simple cases, only one
+die is rolled, and the value on the side of the die determines the outcome. In
+more complicated situations, several dice are rolled at once and the total
+value across all of the dice is used. Of course, when only one die is rolled,
+any outcome is equally likely --- in statistical language, the value of the
+roll is a random variable taken from a uniform (flat) distribution. However,
+when multiple dice are rolled, some outcomes are more likely than others
+because there's often more than one possible roll that will add up to a
+particular value.
+
+For example, consider a roll of two four-sided dice with the sides numbered one
+to four. There's only one way to get a total roll of two: if both dice land on
+one. On the other hand, there are two ways to get a total roll of three: the
+first die could land on one and the second could land on two, or the reverse
+could happen. Continuing the pattern, there are three ways to get four, four
+ways to get five, three ways to get six, two ways to get seven, and one way to
+get eight. Clearly, all outcomes aren't equally likely, and the probability
+distribution over possible outcomes is far from flat. Things quickly get worse
+as we add more sides or more dice.
+
+So, what is the shape of the probability distribution over values of a roll of
+multiple dice? It's complicated. Check out the widget below to see how the
+number and type of dice being rolled affects the shape of the distribution. (If
+you happen to be in the middle of a game of Dungeons and Dragons, you can also
+mouse over the chart to find out just how bad your last roll actually was.)
+
 ---
 
 <style>
     rect {
-        fill: blue;
+        stroke: black;
+        stroke-width: 0;
+        fill: rgb(39, 119, 180);
         rx: 3pt;
+        transition: stroke-width 0.2s;
     }
 
     rect:hover {
         stroke: black;
         stroke-width: 3.5;
+        transition: stroke-width 0.2s;
     }
 
     .flex-row {
@@ -23,7 +75,7 @@ author: Emerson Harkin
     }
 </style>
 
-<p>There is a <span id="tailprob"></span>% probability of getting <span id="totalroll"></span> or lower. <span id="reaction"></span></p>
+<p>There is a <span id="tailprob">62.5</span>% probability of getting <span id="totalroll">5</span> or lower. <span id="reaction"></span></p>
 <div id="distplot"></div>
 
 <!-- Sliders for entering the dice to roll. -->
@@ -32,7 +84,7 @@ author: Emerson Harkin
 <div class="flex-row">
     <div id="dfour" class="slidercontainer flex-col">
         <p><span class="slidervalue"></span>D4</p>
-        <input type="range" min="0" max="8" value="0" class="slider" data-numsides="4">
+        <input type="range" min="0" max="8" value="2" class="slider" data-numsides="4">
     </div>
     <div id="dsix" class="slidercontainer flex-col">
         <p><span class="slidervalue"></span>D6</p>
@@ -65,7 +117,7 @@ author: Emerson Harkin
 const chartSize = {
     height: 400,
     width: 600,
-    margin: 50,
+    margin: 60,
 }
 
 
@@ -76,11 +128,11 @@ chart
     .attr("height", chartSize.height);
 
 xAxis = function(g) {
-    g.attr("transform", `translate(0, ${chartSize.height - chartSize.margin/2})`)
+    g.attr("transform", `translate(0, ${chartSize.height - chartSize.margin/1.5})`)
         .call(d3.axisBottom(x))
 }
 yAxis = function(g) {
-    g.attr("transform", `translate(${chartSize.margin/2}, 0)`)
+    g.attr("transform", `translate(${chartSize.margin/1.5}, 0)`)
         .call(d3.axisLeft(y))
 }
 
@@ -109,11 +161,11 @@ updateChart = function() {
     chart.selectAll("g").remove();
 
     chart.append("g").call(function(g) {
-        g.attr("transform", `translate(${chartSize.margin/2}, 0)`)
+        g.attr("transform", `translate(${chartSize.margin/1.5}, 0)`)
         .call(d3.axisLeft(y))
     });
     chart.append("g").call(function(g) {
-        g.attr("transform", `translate(0, ${chartSize.height - chartSize.margin/2})`)
+        g.attr("transform", `translate(0, ${chartSize.height - chartSize.margin/1.5})`)
         .call(d3.axisBottom(x))
     });
 
@@ -231,3 +283,37 @@ d3.selectAll(".slidercontainer")
 
 updateChart();
 </script>
+
+---
+
+## Two useful results from probability theory
+
+If you've spent a bit of time playing with the widget above, you've probably
+noticed a couple of things.
+
+1. The distribution of a sum of independent random variables is convoluted.
+   Literally. It's the convolution of the underlying probability density or
+   probability mass functions. Convolution involves [sliding two functions past
+   eachother](https://commons.wikimedia.org/wiki/File:Convolution_of_box_signal_with_itself2.gif)
+   and calculating the size of the area of overlap. This explains why the shape
+   of the probability distribution for a roll of any two dice with an equal
+   number of sides has a triangular shape, for example. (It also happens to be
+   how the probabilities in the chart above are calculated.)
+2. As we add up more random variables, things start to look a bit more normal.
+   Literally. The distribution of a sum of independent and identically
+   distributed random variables gets closer and closer to a Normal distribution
+   as more variables are summed. This is called the [Central Limit
+   Theorem](https://en.wikipedia.org/wiki/Central_limit_theorem).  This
+   explains why the probability distributions of rolls with several dice with
+   the same number of sides are shaped like a bell curve[1].
+
+[^1] Although the Central Limit Theorem technically only applies to identically
+distributed random variables, notice that the values of rolls involving dice
+with different numbers of sides also follow roughly bell-shaped distributions.
+This illustrates the robustness of the Central Limit Theorem, and helps explain
+why the Normal distribution shows up so often in nature.
+
+## Sum up
+
+The take-home: if you don't like uncertainty in Dungeons and Dragons, pick
+builds that will let you roll more smaller dice over fewer big dice. Stay lucky!
