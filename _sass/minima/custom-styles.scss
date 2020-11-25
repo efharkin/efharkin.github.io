@@ -16,17 +16,19 @@ ul.cv-list {
     margin-bottom: 0.2em;
 }
 
-.cv-list .item-meta {
-    margin-bottom: 1em;
-}
-
 $grey-color-medium: lighten($grey-color-dark, 20%) !default;
 
-.cv-list .item-meta {
+.item-meta {
+    margin-bottom: 1em;
     color: $grey-color-medium;
 }
 
+
 // Home page
+
+html {
+    scroll-behavior: smooth;
+}
 
 $line-transition-time: 0.3s;
 

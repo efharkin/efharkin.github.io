@@ -13,15 +13,7 @@ exclude: true
     {% for stat in site.data.books.stat %}
     <li>
         <h3>{{stat.title}}</h3>
-        <div class="item-meta" style="display: flex;">
-            <div style="flex: 7;">{{stat.location}}</div>
-            <div class="time-container" style="flex: 3;" align="right">
-                <time datetime="{{stat.date | date: '%Y-%m'}}">{{ stat.date }}</time>
-            </div>
-        </div>
-        {% if stat.authors != blank %}
-            <p>{{ stat.authors }}</p>
-        {% endif %}
+        <div class="item-meta">{{stat.authors}}</div>
         {% if stat.description != blank %}
             {{ stat.description | markdownify }}
         {% endif %}
@@ -35,15 +27,7 @@ exclude: true
     {% for code in site.data.books.coding %}
     <li>
         <h3>{{code.title}}</h3>
-        <div class="item-meta" style="display: flex;">
-            <div style="flex: 7;">{{code.location}}</div>
-            <div class="time-container" style="flex: 3;" align="right">
-                <time datetime="{{code.date | date: '%Y-%m'}}">{{ code.date }}</time>
-            </div>
-        </div>
-        {% if code.authors != blank %}
-            <p>{{ code.authors }}</p>
-        {% endif %}
+        <div class="item-meta">{{code.authors}}</div>
         {% if code.description != blank %}
             {{ code.description | markdownify }}
         {% endif %}
@@ -57,15 +41,7 @@ exclude: true
     {% for neuro in site.data.books.neuro %}
     <li>
         <h3>{{neuro.title}}</h3>
-        <div class="item-meta" style="display: flex;">
-            <div style="flex: 7;">{{neuro.location}}</div>
-            <div class="time-container" style="flex: 3;" align="right">
-                <time datetime="{{neuro.date | date: '%Y-%m'}}">{{ neuro.date }}</time>
-            </div>
-        </div>
-        {% if neuro.authors != blank %}
-            <p>{{ neuro.authors }}</p>
-        {% endif %}
+        <div class="item-meta">{{neuro.authors}}</div>
         {% if neuro.description != blank %}
             {{ neuro.description | markdownify }}
         {% endif %}

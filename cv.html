@@ -34,13 +34,15 @@ exclude: true
 
 <h2> Posters and Talks </h2>
 
-<p id="postertitletip" style="height: 3em;"></p>
+<p id="postertitletip" style="height: 5em;">Mouse over a presentation or click for details.</p>
 <div id="posterline"></div>
 
 <script>
     const presentations = [
         {% for pres in site.data.cv.presentations %}{
-            "title": "{{ pres.title | strip_newlines }}",
+            "id": '{{ pres.id }}',
+            "title": '{{ pres.title | strip_newlines }}',
+            "location": '{{ pres.location | strip_newlines  }}',
             "date": "{{ pres.date | date: '%Y-%m' }}"
         }{% if forloop.last == false %},
         {% endif %}{% endfor %}
@@ -76,29 +78,33 @@ exclude: true
     let highlightedPres;
     let myGroup = chart.append("g");
     myGroup.selectAll("circle").data(presentations).enter()
+        .append("a")
+        .attr("href", (d) => "#" + d.id)
         .append("circle")
         .attr("cx", (d) => x(new Date(d.date)))
         .attr("cy", (d) => yPos + Math.round(yJitter()))
         .attr("r", 7.0)
-        .attr("transition", "fill 0.4s")
         .on("mouseover", function(d) {
             if (highlightedPres != this) {
+                d3.select(highlightedPres)
+                    .attr("fill", "default");
+
                 highlightedPres = this;
 
-                d3.select(this).attr("fill", "red");
+                d3.select(this)
+                    .attr("fill", "grey");
                 tooltip.transition()
                     .duration(200)
                     .style("opacity", 0)
                     .on("end", () => {
-                        tooltip.text(d.title);
+                        tooltip.html(
+                            `<strong>${d.title}</strong><br/><span class="item-meta">${d.location}</span>`
+                        );
                         tooltip.transition()
                             .duration(200)
                             .style("opacity", 1);
                     })
             }
-        })
-        .on("mouseout", function(d) {
-            d3.select(this).attr("fill", "default");
         })
     /*
     yAxis = function(g) {
@@ -110,7 +116,7 @@ exclude: true
 
 <ul class="cv-list">
     {% for pres in site.data.cv.presentations %}
-    <li>
+    <li id="{{ pres.id }}">
         <h3>{{pres.title}}</h3>
         <div class="item-meta" style="display: flex;">
             <div style="flex: 7;">{{pres.location}}</div>

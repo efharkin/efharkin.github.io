@@ -26,7 +26,8 @@ hacks:
           components of machine learning pipeline in Python
 
 presentations:
-  - title: >
+  - id: bhaw2020
+    title: >
       Reverse-Engineering the Serotonin System
     location: University of Ottawa Brain Health Awareness Week
     date: November 2020
@@ -35,7 +36,8 @@ presentations:
     description: |
       - Three minute online talk showcasing my research to general audience
 
-  - title: >
+  - id: ccns2020
+    title: >
       Multiple Mechanisms of Gain Modulation in the Serotonin System
     location: >
       Canadian Computational Neuroscience Spotlight
@@ -49,7 +51,8 @@ presentations:
       - Predicting the properties of the serotonin system using machine
         learning models
 
-  - title: >
+  - id: gaincan2020
+    title: >
       Multiple Mechanisms of Gain Modulation in the Serotonin System
     location: >
       Canadian Association for Neuroscience 14th Annual Meeting &ndash;
@@ -66,7 +69,8 @@ presentations:
       type: Abstract
       path: /assets/doc/Harkin_Emerson_2020_CAN.pdf
 
-  - title: >
+  - id: lhbcan2020
+    title: >
       A Recurrent Network Motif in the Dorsal Raphe Nucleus Classifies Habenula
       Inputs Over Behavioural Timescales
     location: >
@@ -80,7 +84,8 @@ presentations:
       - Poster abstract accepted to national research conference in early March
         but meeting later cancelled due to COVID-19
 
-  - title: >
+  - id: neuromatch2020
+    title: >
       Multiple Mechanisms of Gain Modulation in the Serotonin System
     location: >
       <a href="https://neuromatch.io">Neuromatch</a> 1.0
@@ -97,7 +102,8 @@ presentations:
       type: Slides
       path: /assets/doc/Harkin_Emerson_2020_Neuromatch.pdf
 
-  - title: >
+  - id: charite2019
+    title: >
       Microcircuit Mechanisms for Controlling Serotonergic Gain
     location: "Charit&eacute; University Berlin"
     date: November 2019
@@ -109,7 +115,8 @@ presentations:
       - Research talk summarizing our recent advances in predicting the
         properties of the serotonin system using machine learning models
 
-  - title: >
+  - id: bhaw2019
+    title: >
       Reverse-Engineering the Serotonin System
     location: University of Ottawa Brain Health Awareness Week
     date: October 2019
@@ -121,7 +128,8 @@ presentations:
       type: Slides
       path: /assets/doc/Harkin_Emerson_2019_brain_health_awareness.pdf
 
-  - title: >
+  - id: rl2019
+    title: >
       Reinforcement Learning for Systems Neuroscientists
     location: University of Ottawa Center for Neural Dynamics
     date: August 2019
@@ -134,7 +142,8 @@ presentations:
       type: Slides
       path: /assets/doc/Harkin_Emerson_2019_reinforcement_learning.pdf
 
-  - title: >
+  - id: lhbcan2019
+    title: >
       A Recurrent Network Motif in the Dorsal Raphe Nucleus Supports an
       Operational Classification of Habenula Inputs
     location: Canadian Association for Neuroscience 13th Annual Meeting &ndash; Toronto
@@ -144,7 +153,8 @@ presentations:
       Maill&eacute;, Emerson Harkin, Samir Haj-Dahmane, Richard Naud, and
       Jean-Claude B&eacute;&iuml;que.
 
-  - title: Non-Uniform Subthreshold Dynamics and Integrative Features in Dorsal Raphe Neurons
+  - id: can2018
+    title: Non-Uniform Subthreshold Dynamics and Integrative Features in Dorsal Raphe Neurons
     location: |
       Canadian Association for Neuroscience 12th Annual Meeting &ndash; Vancouver
     date: May 2018
@@ -160,7 +170,8 @@ presentations:
       type: Poster
       path: /assets/doc/Harkin_Emerson_2018_CAN.pdf
 
-  - title: Manipulating Neurons With Light
+  - id: bhrd2017
+    title: Manipulating Neurons With Light
     location: University of Ottawa Brain and Mind Resarch Institute
     date: May 2017
     authors: "Emerson Harkin and Jean-Claude B&eacute;&iuml;que."
