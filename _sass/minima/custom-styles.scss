@@ -13,6 +13,7 @@ ul.cv-list {
 }
 
 .cv-list h3 {
+    margin-top: 0;
     margin-bottom: 0.2em;
 }
 
@@ -62,16 +63,16 @@ a.post-link {
     color: black;
 }
 
-main a:not(.post-link):not(.button):link {
+main a:not(.post-link):not(.button):not(.home-nav-link):link {
     color: $grey-color-dark;
     text-decoration: underline;
 }
 
-main a:not(.post-link):not(.button):visited {
+main a:not(.post-link):not(.button):not(.home-nav-link):visited {
     color: $grey-color-medium;
 }
 
-main a:not(.post-link):not(.button):hover {
+main a:not(.post-link):not(.button):not(.home-nav-link):hover {
     color: white;
     background-color: $grey-color-medium;
     border-radius: 2px;

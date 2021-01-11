@@ -1,0 +1,68 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+    <main class="page-content wrapper" aria-label="Content" style="display: flex; flex-direction: column; justify-content: space-between;">
+        <div style="display: block;">
+          <h2 style="text-align: center; font-size: 48pt; margin-top: 2em;">Emerson Harkin</h2>
+          <div style="display: block; width: 500px; margin-left: calc(50% - 170px); margin-right: auto; margin-bottom: 80px;">
+            <code style="font-size: 18pt;">There's no place like <span id="location">Ottawa</span></code>
+          </div>
+
+          <!-- Navigation -->
+          <div style="display: flex; justify-content: space-between; margin-bottom: 2em;">
+            <a class="home-nav-link" href="about"><i class="fas fa-info-circle"></i><br>About</a>
+            <a class="home-nav-link" href="blog"><i class="fas fa-comment"></i><br>Blog</a>
+            <a class="home-nav-link" href="bookshelf" title="List of helpful resources"><i class="fas fa-book"></i><br>Bookshelf</a>
+            <a class="home-nav-link" href="cv"><i class="fas fa-award" title="Curriculum vitae"></i><br>CV</a>
+            <a class="home-nav-link" href="portfolio"><i class="fas fa-code"></i><br>Portfolio</a>
+          </div>
+          <style>
+            main a.home-nav-link {
+              text-align: center;
+              font-size: 16pt;
+              padding: 7px 10px 3px 10px;
+              text-decoration: none;
+              color: #111111;
+            }
+            main .home-nav-link i {
+              font-size: 24pt;
+            }
+            main a.home-nav-link:hover {
+              color: white;
+              background-color: #757575;
+              border-radius: 10px;
+            }
+          </style>
+        </div>
+
+        <!-- One sentence about me -->
+        <p>Neuroscience PhD student, coder, and lapsed orchidist with strong
+        opinions about <a href="2020/04/13/soup.html">soup</a>.</p>
+        <script>
+          const places = ["Toronto", "Seattle", "Montreal", "Berlin", "Vancouver", "Boston", "Paris", "Ottawa", "~"];
+
+          placeTransition = function(i) {
+            if (places[i]){
+              d3.select("#location")
+                      .text(places[i])
+                      .transition()
+                      .duration(200)
+                      .on("end", () => placeTransition(++i))
+            }
+          }
+          placeTransition(0);
+        </script>
+    </main>
+
+    <footer style="margin-bottom: 1em;">
+      {%- include social.html -%}
+    </footer>
+  </body>
+
+</html>
